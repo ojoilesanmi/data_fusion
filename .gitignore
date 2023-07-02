@@ -1,3 +1,6 @@
 venv/
 .pytest_cache/
 .idea/
+build/
+data_merge.egg-info/
+dist/

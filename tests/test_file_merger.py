@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import pytest
-from data_fusion.file_merger import FileMerger
+from data_merge.file_merger import FileMerger
 
 
 @pytest.fixture

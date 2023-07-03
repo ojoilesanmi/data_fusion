@@ -17,9 +17,7 @@ def test_data_folder(tmpdir):
     csv_data1.to_csv(csv_file1, index=False)
     csv_data2.to_csv(csv_file2, index=False)
 
-    yield temp_folder  # Provide the temporary folder to the tests
-
-    # Clean up the temporary directory after each test
+    yield temp_folder
     temp_folder.remove()
 
 
@@ -36,10 +34,6 @@ def test_merge_csv_files(test_data_folder):
     expected_data = pd.DataFrame({"A": [1, 2, 3, 7, 8, 9], "B": [4, 5, 6, 10, 11, 12]})
     merged_data = merged_data.sort_values(by=["A", "B"]).reset_index(drop=True)
     expected_data = expected_data.sort_values(by=["A", "B"]).reset_index(drop=True)
-    print("Merged Data:")
-    print(merged_data)
-    print("Expected Data:")
-    print(expected_data)
     assert merged_data.equals(expected_data)
 
 

@@ -4,3 +4,4 @@ venv/
 build/
 data_merge.egg-info/
 dist/
+.DS_Store

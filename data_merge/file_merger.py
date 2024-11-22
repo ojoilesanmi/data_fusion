@@ -29,7 +29,6 @@ class FileMerger:
         all_data.to_csv(self.output_path, index=False)
         print("Merged CSV files saved to", self.output_path)
 
-        # Save the path of the merged file
         self.merged_file_path = self.output_path
 
     def get_merged_file_path(self):
